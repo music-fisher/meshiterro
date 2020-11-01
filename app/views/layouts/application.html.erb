@@ -41,14 +41,15 @@
 
                 <li class="">
                   <!--５章で書き直し-->
-                  <%= link_to "マイページ",'＃' %>
+
+                  <%= link_to 'マイページ', user_path(current_user.id) %>
                 </li>
                   <% else %>
                 <li class="">
                   <%= link_to "新規登録", new_user_registration_path %>
                 </li>
                 <li class="">
-                  <%= link_to "ログイン", new_user_session_path %>
+                  <%= link_to "ログイン", user_path(current_user.id) %>
                 </li>
               <% end%>
             </ul>
